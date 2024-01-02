@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Project 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-content {
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: rgb(8, 86, 195);
+            font-weight: bold;
+            text-align: left;
+        }
+
+        h3, h4 {
+            font-weight: bold;
+            text-align: left;
+        }
+
+        p{
+            text-align: left;
+        }
+
+        .project-content h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            margin-bottom: 20px;
+        }
+
+        .project-content video {
+            width: 50%;
+            margin-bottom: 50px;
+        }
+
+        /* .project-content img {
+            width: 100%;
+            margin-bottom: 10px;
+        } */
+
+        nav {
+            background-color: rgb(8, 86, 195);
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 20px;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: black;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .image-container {
+            display: flex;
+        }
+        .image-container img {
+            width: 350px; 
+            height: auto; 
+            margin: 10px;
+           
+        }
+        .unica-imagem img {
+            max-width: 100%; /* Ajusta a largura máxima da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unity Project 1</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="https://github.com/carizadias/cubes" target="_blank"><img width="20" height="20" src="./images/github.ico" alt="Project Repository" ></a>
+    </nav>
+
+    <div class="container">
+        <div class="project-content">
+            <!-- Content specific to Project 1 -->
+            <h2>Project 1 Description</h2>
+            <h4>This project was undertaken in four key steps: </h4>
+            <p>First the integration of the Vuforia Engine; </p>
+            <p>Second, the intricate modeling of landscapes, including the 'Poilão' tree in the 'Boa Entrada' area in Santiago, Cabo Verde, and the 'Santa Monica' beach in 'Boa Vista,' also in Cabo Verde;</p>
+            <p> Third, the implementation of the OpenWeather API to display location-based information, current date/time, and temperature/climate data;</p>
+            <p> And finally, the deployment process tailored for Android mobile devices.</p>
+            <h3>Unity Project setup</h3>
+            <p>My project kicked off on Windows, starting with downloading the Unity Hub. It usually prompts a licensing choice among three options. I usually navigate to 'Manage Licences' and pick the last one, 'Personal.' I used Unity Editor version 2023.3.0a10. Initially, any version from 2022 onwards sufficed for this project.</p>
+
+<p>Creating a basic 3D Unity project involves installing the desired editor. This setup is a smart move, helping catch potential bugs early on. Launching the editor and adjusting 'Player Settings' in 'Build Settings' is key. Under 'Player' > 'Other Settings,' set 'Scripting Backend' to 'IL2CPP' and check 'ARM64' under 'Target Architectures.' Devices with ARMv7 might clash with Vuforia, so be careful here.</p>
+                
+<p>Set 'Minimum API Level' to 30 or above to avoid errors linked to Google dropping support for ARMv7 APIs. Keep 'Target API Level' as 'Automatic (Highest Installed)' to prevent compatibility issues.</p>
+                
+<p>I faced a Vulkan error in 'Graphics APIs.' Solving this required removing Vulkan, leaving only 'OpenGLES3' selected, as shown in the illustration.</p>
+                
+<p>In 'XR Plug-in Management,' ticking 'Ignore Gradle Version' under 'Google ARCore' is a good idea if prompted for a download.</p>
+                
+<p>For deployment on GitHub, confirm 'Asset Serialization' is 'Force Text' in the 'Editor' section. Also, check 'Reduce Version Control Noise.'</p>
+                
+<p>These settings provide a base, but more detailed project configurations will be on the GitHub link for better understanding.</p>
+
+
+                <a href="./settings_img.zip/" download><img width="50" height="50" src="./imgP1/download.ico" alt="see more images" ></a>
+
+                <div  class="image-container">
+                    <a href="./imgP1/Captura de Ecrã (148).png" data-lightbox="example-set" data-title="image Description">
+                        <img width="100px" height="auto" src="./imgP1/Captura de Ecrã (148).png" alt="Image 1">
+                    </a>
+                </div>
+            <h3>Vuforia Engine</h3>
+            <p>The Vuforia Engine is a potent augmented reality (AR) development platform known for its smooth integration and robust capabilities. Equipped with a diverse set of tools and APIs, Vuforia simplifies crafting immersive AR experiences across different sectors. Thanks to its advanced computer vision technology, developers can effortlessly incorporate both marker-based and markerless AR, enabling apps to recognize and interact with real-world objects. Its adaptability makes it a pivotal choice for AR applications, spanning gaming, education, retail, and industrial solutions.</p>
+
+<p>To integrate Vuforia Engine into my project, I first created an account on their website at <a href="https://developer.vuforia.com/" target="_blank">Vuforia</a>. Under the 'Downloads' tab, I selected 'Add Vuforia to Unity Project,' initiating a specific file download. Once downloaded, I opened Unity and dragged this file into the 'Assets' folder, then clicked 'Import.'</p>
+                
+<p>In the Unity project, I removed the default 'Main Camera' and added an 'AR Camera' by selecting the 'Vuforia Engine' option with the '+' symbol. Organizing the AR Camera as the primary element in the hierarchy helped prevent potential future issues.</p>
+                
+<p>Inspecting the AR Camera via the Inspector window, I located the 'Open Vuforia Engine Configuration' button, prompting a request for a license key. By clicking 'Add License,' I accessed the Vuforia webpage. In the 'Develop' section, I entered the 'License Manager.'</p>
+                
+<p>Selecting 'Get Basic' in the License Manager allowed me to name the license key and confirm details, revealing the unique key. Copying this key and pasting it into the 'App License Key' field within Unity completed the seamless integration of the Vuforia Engine into my project.</p>
+
+
+                <div  class="image-container">
+                    <a href="./imgP1/Captura de Ecrã (134).png" data-lightbox="example-set" data-title="image Description">
+                        <img width="100px" height="auto" src="./imgP1/Captura de Ecrã (134).png" alt="Image 1">
+                    </a>
+                </div>
+
+
+                <h4>Vuforia multitargets</h4>
+                <p>Incorporating multitargets is a pivotal but complex phase that significantly impacts project outcomes. A lack of precise measurements led to mismatched proportions between the targets, causing a critical issue: Vuforia's inability to recognize both models together due to their varying sizes. This problem persisted, demanding resolution.</p>
+
+<p>Creating multitargets involves revisiting the Vuforia webpage's 'Develop' section and accessing the 'Target Manager.' Here, starting a new database involves clicking 'Add Database,' naming it, and choosing 'Device.' The subsequent steps include defining the target type, providing measurements, naming it, and clicking 'Add.' Then, a detailed configuration follows, uploading and positioning various parts accurately using the 'Merge' and 'Cubes' classes from project resources.</p>
+                    
+<p>Once completed, downloading the configured database is essential. Like the Vuforia import process, integrating this database into the Unity project requires importing the file into the 'Assets' directory. Within the Unity project hierarchy, creating a multitarget involves right-clicking, selecting 'Vuforia Engine,' and picking 'Multitarget.' Associating this multitarget with the specific database involves repeating this process for the second cube, ensuring its configuration matches the initial setup.</p>
+                    
+<p>If the multitarget doesn't appear in the scene, double-clicking within the project hierarchy allows visibility and adjustments. This thorough process ensures accurate multitarget configuration, critical for optimal functionality within the augmented reality space.</p>
+
+
+                    <div  class="image-container">
+                        <a href="./imgP1/Captura de Ecrã (135).png" data-lightbox="example-set" data-title="image Description">
+                            <img width="100px" height="auto" src="./imgP1/Captura de Ecrã (135).png" alt="Image 1">
+                        </a>
+                    </div>
+
+                
+            <h3>Modeling</h3>
+            <p>The modeling phase was a creatively liberating part of the project, offering artistic freedom. Initially, we downloaded three models directly into our scene and created at least two more models in Unity. Before that, I made an initial step by creating a 3D object (a cube) that enclosed the multitarget. This cube became the focal point for content display when aligned with the camera.</p>
+
+<p>This cube represented a small version containing landscapes. To achieve this, I added textures to these cubes. Creating a new material involved right-clicking in the Assets section, selecting 'Create/Material,' importing the desired image into the Assets folder, and assigning it as the texture by dragging it into the 'Albedo' field within the material properties. Later, I applied this material to the 3D object by navigating to 'Materials,' clicking the circular symbol, and choosing the newly created material.</p>
+                
+<p>I gathered various 3D models from free sources like Free3D and Sketchfab's Free 3D Models. For the 'Class Cube,' models such as a fence, stone, and bush were used. For the 'Merge Cube,' I imported default settings with beach chairs, rocks, sand mounds, and a bucket. In Unity, I focused on basic shapes (cubes, spheres, capsules) and avoided complex scripting.</p>
+                
+<p>This creative process aimed to enhance the project, using primary shapes and basic techniques for visual cohesion and a functional augmented reality experience.</p>
+
+                
+                <a href="./image_models.zip/" download><img width="50" height="50" src="./imgP1/download.ico" alt="see more images" ></a>
+                <div  class="image-container">
+                    
+                    <a href="./imgP1/Captura de Ecrã (149).png" data-lightbox="example-set" data-title="image Description">
+                        <img src="./imgP1/Captura de Ecrã (149).png" alt="Image 1">
+                    </a>
+                    <a href="./imgP1/Captura de Ecrã (153).png"data-lightbox="example-set" data-title="image Description">
+                        <img src="./imgP1/Captura de Ecrã (153).png" alt="Image 2">
+                </a>
+                    
+                </div>
+            <h3>OpenWeather API</h3>
+            <p>Integrating the <a href="https://openweathermap.org/" target="_blank">OpenWeather API</a> brought about initial challenges, yet eventually unfolded as an intriguing albeit slightly demanding phase. To begin, having an account on the OpenWeather platform is a prerequisite. After account creation, accessing the dashboard is crucial. Subscribing to the free plan is the next step. Inside the account settings, accessing the 'API Keys' section is pivotal. If a key isn't available, generating one by clicking 'Generate' is essential.</p>
+
+<p>Different plans offer distinct API calls, enabling customization based on information and location specifics. Despite navigating complexities on the OpenWeather website, the basic structure of the free plan's API call typically resembles 'https://api.openweathermap.org/data/2.5/weather?...'—where the ellipsis denotes specific information parameters, followed by the API key.</p>
+
+<p>Insights into the API's functionality and data retrieval process reside in the 'OpenWeatherAPI.cs' file in the project repository. This file contains the API call and logical implementations for retrieving location, weather, and date/time data for each cube's location. In Unity, creating a new script in the Assets folder, naming it meticulously, and dragging it onto the Inspector panel above the Vuforia behavior file (found in the AR camera's Inspector) is essential.</p>
+
+<p>Implementing logic within the script should populate resultant fields. Within Unity, adding a 'UI TextMeshPro' to the cube is crucial. After configuring this UI element, dragging it into the corresponding field beneath the 'OpenWeatherAPI.cs' script is necessary.</p>
+
+<p>Testing the project in 'Play' mode verifies functionality. Webcam-related issues might occur during this phase. I encountered and resolved this issue by transitioning from Ubuntu 22.04 to Windows, reinstalling Unity, and restarting the project—effectively solving the webcam problem during 'Play' mode.</p>
+
+
+                <div  class="image-container">
+                    <a href="./imgP1/Captura de Ecrã (136).png" data-lightbox="example-set" data-title="image Description">
+                        <img src="./imgP1/Captura de Ecrã (136).png" alt="Image 1">
+                    </a>
+                    <a href="./imgP1/Captura de Ecrã (158).png"data-lightbox="example-set" data-title="image Description">
+                        <img src="./imgP1/Captura de Ecrã (153).png" alt="Image 2">
+                </a>
+            </div>
+            <h3>Deployment</h3>
+            <p>Prioritizing a comprehensive approach, I suggest initiating the 'Build and Run' phase before delving into modeling intricacies and OpenWeather API integration. Post Vuforia setup and the establishment of targets, especially when arranging cubes for multitargets, conducting a 'Build and Run' procedure offers substantial insight into real-time project functionality.</p>
+
+<p>Start by establishing a connection between your mobile device and the PC—a critical step. Utilize the original mobile device cable for optimal connectivity. On your mobile device, navigate to settings, access 'About Phone,' and locate 'Build Number.' Tap this number seven times to reveal 'Developer Options.' Within this menu, go to 'USB Debugging' and activate it. Consider enabling 'Stay Awake' to prevent screen locking during application execution. Activate 'Install via USB,' 'USB Debugging (Security Settings),' 'Disable USB Debugging Timeouts,' and 'Force Allow Apps on External' for smooth application execution.</p>
+
+<p>During this setup, encountering bugs, particularly concerning device permissions for accepting unknown files, is common. Assign permissions to relevant applications, especially those associated with project downloads like Google, to preemptively resolve potential permission-related issues.</p>
+
+<p>Transitioning to Unity, navigate to 'Build Settings' and select 'Run Device.' Find your device; if it doesn't appear immediately, manually input its IP address or click 'Refresh.' Initial attempts may not yield immediate results, so several iterations might be necessary. Ensure 'Add Open Scenes' is selected, check 'Development Build,' and finally, execute 'Build and Run.' The loading phase may take time, but the application will automatically launch on your mobile device upon completion.</p>
+
+<p>The application prompts for camera permissions and should seamlessly function, leveraging the device's camera capabilities for augmented reality experiences. Note: Avoid using a Redmi Note phone as it may show switched colors in the background (red turns blue, etc.). Deploying on a Samsung 14A worked without issues, although the cause of this discrepancy is unknown.</p>
+
+            
+
+            <h2>Final Product</h2>
+            <p>there are some notes on the final product, as the multitargets diferente  mesurements made it so the cubes aren't target it at the same time and the transitions arent so well.</p>
+            <video controls>
+                <source src="./imgP1/Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <footer style="background-color: rgb(8, 86, 195); padding: 20px; text-align: center;">
+        <div style="display: flex; justify-content: space-around;">
+            <!-- Redes Sociais -->
+            <div>
+                <h4>Unimindelo</h4>
+                <a style="text-decoration: none; color: white;" href="https://um.edu.cv/" target="_blank">https://um.edu.cv/</a><br>
+                
+            </div>
+            
+            <!-- Informações de Contato -->
+            <div>
+                <h4>Contact</h4>
+                <p>Email: carizapddias@gmail.com</p>
+                
+            </div>
+            
+            <!-- Links de Navegação -->
+            <div>
+                <h4>Usefull links</h4>
+                <a target="_blank" style="text-decoration: none;color: white;" href="https://www.evl.uic.edu/aej/428/22project1.html">Project Assignment</a><br>
+                
+            </div>
+        </div>
+        
+        <!-- Créditos e Direitos Autorais -->
+        <p>&copy; 2023 @Unimindelo. All rights reserved..</p>
+    </footer>
+</body>
+</html>

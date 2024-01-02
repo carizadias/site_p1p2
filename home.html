@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Project Journey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            width: 30%;
+        }
+
+        .main-content {
+            width: 65%;
+        }
+
+        .sidebar nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .sidebar label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .sidebar select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unity Project Journey</h1>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <nav>
+                <label for="projectSelect">Select a Project:</label>
+                <select id="projectSelect" onchange="changeProject()">
+                    <option value="">Select...</option>
+                    <option value="project1.html">Project 1</option>
+                    <option value="project2.html">Project 2</option>
+                    <!-- Add more projects as needed -->
+                </select>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <!-- Main content -->
+            <h2>Welcome to Unity Projects</h2>
+            <p>This journey through <b>projects 1, 2, and 3(final project)</b> of CS 428 marks the starting point towards a deep dive into the realm of Augmented Reality (AR) and Virtual Reality (VR), centered around the powerful Unity platform. Unity, renowned for its versatility and robustness, stands as a fundamental tool in this educational journey, offering a conducive environment for the creation and experimentation with these immersive technologies.
+               </p>
+               <p> Augmented Reality allows the overlay of virtual elements onto the real world, while Virtual Reality provides entirely immersive environments. Unity stands out as a platform that catalyzes the understanding and application of these concepts, enabling the creation of interactive virtual environments, 3D object modeling, and interaction programming.</p>
+               <p> By delving into projects 1, 2, and 3, students are exposed to the vast potential of Unity in developing immersive experiences, learning from fundamental principles to advanced AR and VR techniques. This learning path aims not only for theoretical understanding but also practical application, empowering students to explore the boundaries of innovation in these ever-evolving fields. Thus, this journey forms a solid foundation for future exploration and creation of AR and VR experiences across various professional domains.</p>
+            <!-- Add any introductory content for the home page -->
+        </div>
+    </div>
+
+    <footer style="background-color: black; padding: 20px; text-align: center;">
+        <div style="display: flex; justify-content: space-around;">
+            <!-- Redes Sociais -->
+            <div>
+                <h4>Unimindelo</h4>
+                <a style="text-decoration: none; color: white;" href="https://um.edu.cv/" target="_blank">https://um.edu.cv/</a><br>
+                
+            </div>
+            
+            <!-- Informações de Contato -->
+            <div>
+                <h4>Contact</h4>
+                <p>Email: carizapddias@gmail.com</p>
+                
+            </div>
+        </div>
+        
+        <!-- Créditos e Direitos Autorais -->
+        <p>&copy; 2023 @Unimindelo. All rights reserved</p>
+    </footer>
+
+    <script>
+        function changeProject() {
+            var selectedProject = document.getElementById("projectSelect").value;
+            if (selectedProject) {
+                window.location.href = selectedProject;
+            }
+        }
+    </script>
+</body>
+</html>
